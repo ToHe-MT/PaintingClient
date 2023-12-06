@@ -6,9 +6,6 @@ First Time Developing API from scratch and connect it to the client-side
 
 Client Side Repo - [Repository](https://github.com/ToHe-MT/PaintingServer)
 
-# FaceRecognition Client
-This repository contains the Client-Side for my Face Recognition Project. The corresponding Server or API can be found in this [repository](https://github.com/ToHe-MT/FaceRecognitionAPI).
-
 
 ### Installation
 
@@ -27,5 +24,5 @@ The corresponding Server or API can be found in this [repository](https://github
 
 ### To run the server use 
 
-`npm run dev` or `npm next dev`
+`npm run dev`
 

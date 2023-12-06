@@ -1,0 +1,91 @@
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    min-width: 400px;
+    width: 100%;
+    /* border: #000000 2px solid;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.table thead tr {
+    color: #000000;
+    text-align: left;
+    /* text-transform: capitalize; */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    white-space: nowrap
+}
+
+.table tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.table th {
+    padding-inline: 15px;
+    height: 30px;
+}
+
+.table td {
+    text-transform: capitalize;
+    text-align: left;
+    height: 40px;
+    padding-inline: 15px;
+    margin: 10px;
+}
+
+.table .button {
+    text-align: right;
+}
+
+.table button {
+    min-width: 34px;
+    max-width: 70px;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.buttons a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+
+.cards h3 {
+    margin-top: 20px;
+}
+
+.buttons svg {
+    margin: 2px;
+}
+
+/* td[class="paper.isFullCotton"] {
+    color: red;
+    background-color: red;
+} */
+
+td.isFullCotton {
+    position: relative;
+}
+
+td.false,
+td.Sold {
+    color: red;
+}
+
+td.true,
+td.Available {
+    color: green;
+}
+
+td.Maintenance{
+    color:yellowgreen
+}

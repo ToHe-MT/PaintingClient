@@ -1,0 +1,76 @@
+.DetailContainer img {
+    max-width: 400px;
+    border-radius: 2rem;
+    margin: 2rem;
+    max-height: 400px;
+
+}
+
+.Flex-Detail-Container{
+    display: flex;
+}
+
+.Grid-Container{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    align-content: flex-start;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+.Detail h1 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    text-align: left;
+}
+.Detail h2 {
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    text-transform:capitalize;
+}
+
+.Detail h5 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 100;
+    color:#6D7588;
+    text-align: left;
+    margin-left: 8px;
+    margin-bottom: 12px;
+}
+.Detail h6 {
+    margin: 0;
+    text-align: left;
+    font-weight: 400;
+    font-style:normal;
+    color:black;
+    font-size: 12px;
+}
+
+.Detail p {
+    margin: 0;
+    font-size: 8px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    opacity: 30%;
+    margin-bottom: 20px;
+}
+
+
+
+.Grid {
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: repeat (10,40px);
+}
+
+.Paintings > div > .CardContent{
+    margin: 0;
+}
+.Paintings> h2{
+    margin-top: 20px;
+}

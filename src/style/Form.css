@@ -1,0 +1,159 @@
+.Form {
+    width: 600px;
+}
+.Form button {
+    text-align: center;
+}
+
+.Form h1 {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.Form h2 {
+    padding: 0;
+    margin-left: 20px;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.formInput label {
+    color: gray;
+    font-size: 16px;
+}
+
+.formInput input,
+.formInput select {
+    padding: 4px 20px;
+    margin: 4px 0px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    /* width: 400px; */
+}
+
+.formInput span {
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
+
+.formInput input:invalid[focused="true"] {
+    border: 1px solid red;
+}
+
+.formInput input:invalid[focused="true"]~span {
+    display: block;
+}
+
+.Form button {
+    color: white;
+    background-color: #3992ff;
+    margin: 0;
+    margin-inline: auto;
+}
+
+.grid-select-radio {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.grid-select-radio select {
+    padding: 2px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+    max-width: 200px;
+
+}
+.grid-select-radio label {
+    color: gray;
+    
+}
+
+/* Style for dropdown arrow */
+.grid-select-radio select::after {
+    content: '\25BC';
+    /* Unicode character for a downward-pointing triangle */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Style for selected option */
+.grid-select-radio select option:checked {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hover effect */
+.grid-select-radio select:hover {
+    border-color: #666;
+}
+
+/* Focus effect */
+.grid-select-radio select:focus {
+    outline: none;
+    border-color: #0099ff;
+    box-shadow: 0 0 5px rgba(0, 153, 255, 0.5);
+}
+
+.grid-checkbox{
+    margin-left: 0px;
+    color: gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 4px;
+    margin-bottom: 20px;
+    margin-top: 4px;
+}
+.grid-checkbox input{
+    min-width: 20px;
+    min-height: 20px;
+}
+.checkbox{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 8px;
+}
+.checkboxform h2{
+    margin-left: 20px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.images{
+    position: relative;
+    width: fit-content;
+}
+.images .closeBtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: white;
+    padding-inline: 10px;
+    display: flex;
+    align-self: baseline;
+    justify-content: center;
+    border: 1px solid color;
+    border-radius: 50%;
+}

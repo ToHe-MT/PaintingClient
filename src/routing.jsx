@@ -23,14 +23,13 @@ import Painting_Create from './pages/form/Painting_Create'
 import Painting_Detail from './pages/detail/Painting_Detail'
 import Painting_Update from './pages/form/Painting_Update'
 
-const routing = () => {
-    const { id } = useParams();
+const routing = ({id}) => {
     return (
         <Routes>
             //Home Route
             <Route path="/" element={<Home />} />
             //Listing Route
-            <Route path="/Buyers" element={<Buyers />} />
+            <Route path="/buyers" element={<Buyers />} />
             <Route path="/dimensions" element={<Dimensions />} />
             <Route path="/mediums" element={<Mediums />} />
             <Route path="/paintings" element={<Paintings />} />
@@ -43,13 +42,13 @@ const routing = () => {
 
             //Create route
             <Route path="/painting/create" element={<Painting_Create />} />
-            <Route path="/Buyer/create" element={<Buyer_Create/>} />
+            <Route path="/buyer/create" element={<Buyer_Create/>} />
             <Route path="/dimension/create" element={<Dimension_Create/>} />
             <Route path="/medium/create" element={<Medium_Create />} />
 
             //Update route
             <Route path="/painting/:id/update" element={<Painting_Update />} />
-            <Route path="/Buyer/:id/update" element={<Buyer_Update />} />
+            <Route path="/buyer/:id/update" element={<Buyer_Update />} />
             <Route path="/dimension/:id/update" element={<Dimension_Update/>} />
             <Route path="/medium/:id/update" element={<Medium_Update />} />
         </Routes>

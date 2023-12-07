@@ -1,5 +1,6 @@
 import SideBar from './components/SideBar'
 import Routing from './routing'
+import { useParams } from 'react-router-dom';
 
 function NoMatch() {
   return (
@@ -11,13 +12,13 @@ function NoMatch() {
 }
 
 function App() {
-
+  const {id } = useParams()
   return (
     <>
     <div className='layout'>
       <SideBar/>
       <div className='content'>
-        <Routing/>
+        <Routing id={id}/>
       </div>
     </div>
     </>

@@ -41,7 +41,7 @@ const Painting = () => {
                                         <img
 
                                             className='image'
-                                            src={`http://localhost:9000/api/image/${ele}?width=400&height=400`}
+                                            src={`${import.meta.env.VITE_SERVER}/api/image/${ele}?width=400&height=400`}
                                             alt={`Picture ID ${ele}`}
                                         />
                                     </div>

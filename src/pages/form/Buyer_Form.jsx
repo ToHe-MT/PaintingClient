@@ -95,7 +95,7 @@ const Buyer_Form = ({ initialValues, url }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:9000/paintings');
+        const response = await fetch(`${import.meta.env.VITE_SERVER}/paintings`);
         const data = await response.json();
         console.log(data)
         setPaintings(data);

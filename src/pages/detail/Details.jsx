@@ -1,55 +1,49 @@
-import React from 'react'
+import React from 'react';
 
-const normal = ({ ele, upper }) => {
+const Normal = ({ ele, data, upper }) => {
     return (
-        upper ?
-            <div className='normal'>
-                <h5 className='label'>{ele.label}</h5>
-                <h5 className='value'>{data[upper][ele.value]}</h5>
-            </div>
-            :
-            <div className='normal'>
-                <h5 className='label'>{ele.label}</h5>
-                <h5 className='value'>{data[ele.value]}</h5>
-            </div>
-    )
-}
+        <div className='normal'>
+            <h5 className='label'>{ele.label}</h5>
+            <h5 className='value'>{upper ? data[upper][ele.value] : data[ele.value]}</h5>
+        </div>
+    );
+};
 
-const boolean = ({ data, ele, upper }) => {
+const Boolean = ({ ele, data, upper }) => {
     return (
-        upper ?
-            <div className='boolean'>
-                < h5 className='label' > {ele.label}</h5 >
-                {data[upper][ele.value] && <h5 className='value'>{data[ele.value]}</h5>}
-                {!data[upper][ele.value] && <h5 className='value'>{data[ele.value]}</h5>}
-            </div >
-            :
-            <div className='boolean'>
-                <h5 className='label'>{ele.label}</h5>
-                {data[ele.value] && <h5 className='value'>{data[ele.value]}</h5>}
-                {!data[ele.value] && <h5 className='value'>{data[ele.value]}</h5>}
-            </div>
-    )
-}
+        <div className='boolean'>
+            <h5 className='label'>{ele.label}</h5>
+            <h5 className='value'>{(upper ? data[upper][ele.value] : data[ele.value]) ? 'True' : 'False'}</h5>
+        </div>
+    );
+};
 
-const upper = ({ ele }) => {
+const Upper = ({ ele, data }) => {
     return (
         <div className='upper'>
-            {ele[child].map((e, idx) => {
-                { e.type === "normal" && <normal ele={e} upper={ele.value} /> }
-                { e.type === "boolean" && <boolean ele={e} upper={ele.value} /> }
-            })
-            }
+            {ele.child.map((e, idx) => {
+                return (
+                    <div key={idx}>
+                        {e.type === 'normal' && <Normal ele={e} data={data} upper={ele.value} />}
+                        {e.type === 'boolean' && <Boolean ele={e} data={data} upper={ele.value} />}
+                    </div>
+                );
+            })}
         </div>
-    )
-}
+    );
+};
 
 const Details = ({ config, data }) => {
     return (
-        config.map((ele,idx)=>{
-            {ele.type===upper&&</upper>}
-        })
-    )
-}
+        <div>
+            {config.map((ele, idx) => {
+                if (ele.type === 'upper') {
+                    return <Upper key={idx} ele={ele} data={data} />;
+                }
+                return null;
+            })}
+        </div>
+    );
+};
 
-export default Details
+export default Details;
